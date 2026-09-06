@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>槓桿精油站 - EP.49 階級複製</title>
+    <style>
+        :root {
+            --bg-dark: #121212;
+            --bg-sidebar: #1e1e1e;
+            --text-main: #e0e0e0;
+            --text-muted: #888888;
+            --accent-color: #d4af37; /* 金黃色點綴 */
+            --border-color: #333333;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, 'LiHei Pro', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* 左側導覽列 */
+        .sidebar {
+            width: 300px;
+            background-color: var(--bg-sidebar);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .sidebar-header h1 {
+            color: var(--accent-color);
+            font-size: 20px;
+            margin: 0 0 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar-header h1::before {
+            content: '📈';
+            margin-right: 10px;
+        }
+
+        .sidebar-header p {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .search-box {
+            margin: 15px 20px;
+            padding: 8px 12px;
+            background-color: #2a2a2a;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: var(--text-main);
+            font-size: 14px;
+        }
+
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-item {
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background-color: #2a2a2a;
+        }
+
+        .nav-item.active {
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .nav-item-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+
+        .nav-item-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* 右側主內容區 */
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .content-header {
+            margin-bottom: 40px;
+        }
+
+        .content-header h2 {
+            font-size: 24px;
+            margin: 0 0 10px 0;
+        }
+
+        .content-header p {
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* 內容卡片架構 */
+        .section-block {
+            display: flex;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            width: 120px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #90caf9; /* 淡藍色標籤 */
+            flex-shrink: 0;
+        }
+
+        .section-content {
+            flex: 1;
+        }
+
+        .info-row {
+            margin-bottom: 15px;
+        }
+
+        .info-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .info-text {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* 底部對話框示意 */
+        .bottom-bar {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .bottom-bar-text {
+            flex: 1;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1>槓桿精油站</h1>
+            <p>所有人終生投資追求資產倍數的核心目標<br>大仁｜投資｜生命週期</p>
+        </div>
+        <div class="search-box">搜尋所有筆記...</div>
+        <ul class="nav-list">
+            <li class="nav-item active">
+                <div class="nav-item-title">EP. 49 有錢人的孩子到底贏在哪？</div>
+                <div class="nav-item-desc">階級複製，複製的不只是錢</div>
+            </li>
+            <li class="nav-item">
+                <div class="nav-item-title">EP. 48 把房子算進去，你的股票可能買太少了</div>
+                <div class="nav-item-desc">風險應該事前決定，不是事後加碼</div>
+            </li>
+            <li class="nav-item">
+                <div class="nav-item-title">EP. 47 股票黃金我全都要</div>
+                <div class="nav-item-desc">股+金配置 (GDE) | 做風險對沖前先留現金</div>
+            </li>
+            <li class="nav-item">
+                <div class="nav-item-title">EP. 46 如何成為槓桿藝術家？</div>
+                <div class="nav-item-desc">破解投資「不可能的三角形」</div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="content-header">
+            <h2>EP.49｜有錢人的孩子到底贏在哪？｜階級複製，複製的不只是錢</h2>
+            <p>所有人終生投資與人生決策的核心思維</p>
+        </div>
+
+        <div class="section-block">
+            <div class="section-title">階級複製與跨越</div>
+            <div class="section-content">
+                <div class="info-row">
+                    <div class="info-label">主旨</div>
+                    <div class="info-text">維持現狀與低風險決策只會複製現有的階級，年輕人應專注於提升人力資本，並勇於提早承受投資市場的波動。</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">金句</div>
+                    <div class="info-text">「命就是你做了一百次都會做同一個選擇；運就是你跳出了那個選擇，去做不一樣的事情。」 [00:11:39]</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">認知</div>
+                    <div class="info-text">在年輕、本金較小時，與其費盡心機省小錢，不如將資源投入提升自身的賺錢技能（人力資本），並提早適應市場波動。這是在本金累積初期最有效的策略，也是打破階級複製的關鍵執行邏輯。 [00:23:13]</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-block">
+            <div class="section-title">機會與準備</div>
+            <div class="section-content">
+                <div class="info-row">
+                    <div class="info-label">主旨</div>
+                    <div class="info-text">機會只留給準備好的人，事前的研究、認知與風險控管是果斷決策的底氣。</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">金句</div>
+                    <div class="info-text">「當風吹來、鈔票往你臉上飛的時候，你要想辦法拿一個大盆子把它接住，不要只拿了一個漱口杯去那邊承接。」 [00:20:46]</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">認知</div>
+                    <div class="info-text">看到別人的成功不要只歸咎於運氣。透過平時的觀察與學習，建立正確的資產配置（如借貸現金流的防線），才能在絕佳機會（如買房時機或市場大跌）出現時，毫不猶豫地出手抓住。 [00:19:47]</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-block">
+            <div class="section-title">財富傳承的智慧</div>
+            <div class="section-content">
+                <div class="info-row">
+                    <div class="info-label">主旨</div>
+                    <div class="info-text">金錢應在孩子人生最需要資金的階段給予，並透過父母自身的「身教」傳遞正確的金錢價值觀。</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">金句</div>
+                    <div class="info-text">「要留給孩子足夠的錢，讓他們覺得自己什麼都可以去做，但不要多到讓他們覺得自己什麼都不用做。」 [00:36:56]</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">認知</div>
+                    <div class="info-text">把錢留到過世後當作遺產是相對無效的繼承方式。資金應該在孩子三、四十歲（面臨買房、成家壓力）最需要時給予協助。同時，父母日常的消費行為與生活型態會直接影響孩子，身教的影響力遠大於言教。 [00:43:26]</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-bar">
+            <div class="bottom-bar-text">
+                ▶ 有錢人孩子到底贏在哪？ | 準備輸入筆記...
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
