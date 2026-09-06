@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>槓桿精油站｜大仁來開槓 EP.10～EP.50 完整精華整理</title>
     <meta name="description" content="大仁來開槓 Podcast EP.10 ~ EP.50 核心知識庫、生命週期投資法、槓桿ETF（0050正2）、房貸信貸資產配置、報酬順序風險全集精華整理。">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -21,13 +20,10 @@
             --primary: #f59e0b;
             --primary-rgb: 245, 158, 11;
             --primary-hover: #d97706;
-            --accent-red: #ef4444;
-            --accent-blue: #38bdf8;
             --tag-bg: rgba(245, 158, 11, 0.12);
             --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
             --header-bg: rgba(24, 26, 31, 0.85);
         }
-
         :root[data-theme="light"] {
             --bg-body: #f8fafc;
             --bg-sidebar: #ffffff;
@@ -39,21 +35,13 @@
             --primary: #d97706;
             --primary-rgb: 217, 119, 6;
             --primary-hover: #b45309;
-            --accent-red: #dc2626;
-            --accent-blue: #0284c7;
             --tag-bg: rgba(217, 119, 6, 0.1);
             --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
             --header-bg: rgba(255, 255, 255, 0.85);
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
             background-color: var(--bg-body);
             color: var(--text-main);
             line-height: 1.7;
@@ -63,7 +51,6 @@
             overflow: hidden;
             transition: background-color 0.25s ease, color 0.25s ease;
         }
-
         header.app-header {
             height: 64px;
             background: var(--header-bg);
@@ -76,33 +63,10 @@
             z-index: 100;
             flex-shrink: 0;
         }
-
-        .header-brand {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .header-logo-icon {
-            font-size: 1.6rem;
-            line-height: 1;
-        }
-
-        .header-title-box h1 {
-            font-size: 1.15rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            color: var(--text-main);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .header-title-box p {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-        }
-
+        .header-brand { display: flex; align-items: center; gap: 0.75rem; }
+        .header-logo-icon { font-size: 1.6rem; }
+        .header-title-box h1 { font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; }
+        .header-title-box p { font-size: 0.75rem; color: var(--text-muted); }
         .badge-count {
             background: var(--tag-bg);
             color: var(--primary);
@@ -112,13 +76,7 @@
             font-weight: 600;
             border: 1px solid rgba(var(--primary-rgb), 0.25);
         }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
+        .header-actions { display: flex; align-items: center; gap: 0.75rem; }
         .btn {
             display: inline-flex;
             align-items: center;
@@ -131,42 +89,14 @@
             background: var(--bg-card);
             color: var(--text-main);
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: all 0.2s;
             text-decoration: none;
         }
-
-        .btn:hover {
-            background: var(--bg-card-hover);
-            border-color: var(--primary);
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: #ffffff !important;
-            border-color: var(--primary);
-        }
-
-        .btn-primary:hover {
-            background: var(--primary-hover);
-        }
-
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--text-main);
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.25rem;
-        }
-
-        .app-body {
-            display: flex;
-            flex: 1;
-            overflow: hidden;
-            position: relative;
-        }
-
+        .btn:hover { background: var(--bg-card-hover); border-color: var(--primary); }
+        .btn-primary { background: var(--primary); color: #fff !important; border-color: var(--primary); }
+        .btn-primary:hover { background: var(--primary-hover); }
+        .menu-toggle { display: none; background: none; border: none; color: var(--text-main); font-size: 1.5rem; cursor: pointer; }
+        .app-body { display: flex; flex: 1; overflow: hidden; position: relative; }
         aside.sidebar {
             width: 380px;
             background: var(--bg-sidebar);
@@ -177,26 +107,9 @@
             transition: transform 0.3s ease;
             z-index: 90;
         }
-
-        .sidebar-search-box {
-            padding: 1rem 1.25rem 0.75rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .search-input-wrapper {
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-
-        .search-icon {
-            position: absolute;
-            left: 0.85rem;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            pointer-events: none;
-        }
-
+        .sidebar-search-box { padding: 1rem 1.25rem 0.75rem; border-bottom: 1px solid var(--border-color); }
+        .search-input-wrapper { position: relative; display: flex; align-items: center; }
+        .search-icon { position: absolute; left: 0.85rem; color: var(--text-muted); font-size: 0.9rem; pointer-events: none; }
         .search-input {
             width: 100%;
             padding: 0.55rem 2rem 0.55rem 2.2rem;
@@ -208,22 +121,8 @@
             outline: none;
             transition: border-color 0.2s;
         }
-
-        .search-input:focus {
-            border-color: var(--primary);
-        }
-
-        .clear-search-btn {
-            position: absolute;
-            right: 0.75rem;
-            background: none;
-            border: none;
-            color: var(--text-muted);
-            cursor: pointer;
-            font-size: 0.9rem;
-            display: none;
-        }
-
+        .search-input:focus { border-color: var(--primary); }
+        .clear-search-btn { position: absolute; right: 0.75rem; background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 0.9rem; display: none; }
         .category-filter-bar {
             display: flex;
             gap: 0.4rem;
@@ -232,11 +131,7 @@
             border-bottom: 1px solid var(--border-color);
             scrollbar-width: none;
         }
-
-        .category-filter-bar::-webkit-scrollbar {
-            display: none;
-        }
-
+        .category-filter-bar::-webkit-scrollbar { display: none; }
         .filter-pill {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -249,182 +144,29 @@
             cursor: pointer;
             transition: all 0.2s;
         }
-
-        .filter-pill:hover,
-        .filter-pill.active {
-            background: var(--tag-bg);
-            color: var(--primary);
-            border-color: var(--primary);
-            font-weight: 600;
-        }
-
-        .episode-list {
-            flex: 1;
-            overflow-y: auto;
-            padding: 0.5rem 0;
-            list-style: none;
-        }
-
-        .episode-item {
-            padding: 0.85rem 1.25rem;
-            border-bottom: 1px solid var(--border-color);
-            cursor: pointer;
-            transition: background 0.15s, border-color 0.15s;
-            position: relative;
-        }
-
-        .episode-item:hover {
-            background: var(--bg-card-hover);
-        }
-
-        .episode-item.active {
-            background: var(--bg-card);
-            border-left: 4px solid var(--primary);
-            padding-left: calc(1.25rem - 4px);
-        }
-
-        .ep-meta-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 0.35rem;
-        }
-
-        .ep-badge {
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: var(--primary);
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .ep-cat-tag {
-            font-size: 0.68rem;
-            padding: 0.1rem 0.45rem;
-            border-radius: 4px;
-            background: var(--border-color);
-            color: var(--text-muted);
-        }
-
-        .ep-list-title {
-            font-size: 0.88rem;
-            font-weight: 600;
-            color: var(--text-main);
-            line-height: 1.45;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .ep-list-desc {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            margin-top: 0.3rem;
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        main.content-view {
-            flex: 1;
-            overflow-y: auto;
-            padding: 2rem 3rem 4rem;
-            background: var(--bg-body);
-        }
-
-        .content-container {
-            max-width: 880px;
-            margin: 0 auto;
-        }
-
-        .article-header {
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .ep-headline-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .cat-pill-hero {
-            background: var(--tag-bg);
-            color: var(--primary);
-            font-size: 0.8rem;
-            font-weight: 700;
-            padding: 0.25rem 0.75rem;
-            border-radius: 6px;
-            border: 1px solid rgba(var(--primary-rgb), 0.3);
-        }
-
-        .article-title {
-            font-size: 1.85rem;
-            font-weight: 900;
-            line-height: 1.35;
-            color: var(--text-main);
-            margin-bottom: 1rem;
-        }
-
-        .article-quick-nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px dashed var(--border-color);
-        }
-
-        .article-section {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1.75rem 2rem;
-            margin-bottom: 1.75rem;
-            box-shadow: var(--shadow);
-        }
-
-        .section-header-title {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--text-main);
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 0.6rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .section-header-title .icon {
-            font-size: 1.3rem;
-        }
-
-        p.summary-text {
-            font-size: 0.98rem;
-            line-height: 1.8;
-            color: var(--text-main);
-        }
-
-        ol.top-list {
-            padding-left: 0;
-            list-style: none;
-            counter-reset: top-counter;
-        }
-
-        ol.top-list li {
-            position: relative;
-            padding-left: 2.2rem;
-            margin-bottom: 0.85rem;
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
+        .filter-pill:hover, .filter-pill.active { background: var(--tag-bg); color: var(--primary); border-color: var(--primary); font-weight: 600; }
+        .episode-list { flex: 1; overflow-y: auto; padding: 0.5rem 0; list-style: none; }
+        .episode-item { padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--border-color); cursor: pointer; transition: background 0.15s; }
+        .episode-item:hover { background: var(--bg-card-hover); }
+        .episode-item.active { background: var(--bg-card); border-left: 4px solid var(--primary); padding-left: calc(1.25rem - 4px); }
+        .ep-meta-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.35rem; }
+        .ep-badge { font-size: 0.75rem; font-weight: 700; color: var(--primary); font-family: 'JetBrains Mono', monospace; }
+        .ep-cat-tag { font-size: 0.68rem; padding: 0.1rem 0.45rem; border-radius: 4px; background: var(--border-color); color: var(--text-muted); }
+        .ep-list-title { font-size: 0.88rem; font-weight: 600; color: var(--text-main); line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .ep-list-desc { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+        main.content-view { flex: 1; overflow-y: auto; padding: 2rem 3rem 4rem; background: var(--bg-body); }
+        .content-container { max-width: 880px; margin: 0 auto; }
+        .article-header { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); }
+        .ep-headline-badge { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; }
+        .cat-pill-hero { background: var(--tag-bg); color: var(--primary); font-size: 0.8rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 6px; border: 1px solid rgba(var(--primary-rgb), 0.3); }
+        .article-title { font-size: 1.85rem; font-weight: 900; line-height: 1.35; color: var(--text-main); margin-bottom: 1rem; }
+        .article-quick-nav { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed var(--border-color); }
+        .article-section { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.75rem 2rem; margin-bottom: 1.75rem; box-shadow: var(--shadow); }
+        .section-header-title { display: flex; align-items: center; gap: 0.6rem; font-size: 1.25rem; font-weight: 700; color: var(--text-main); border-bottom: 2px solid var(--primary); padding-bottom: 0.6rem; margin-bottom: 1.25rem; }
+        .section-header-title .icon { font-size: 1.3rem; }
+        p.summary-text { font-size: 0.98rem; line-height: 1.8; color: var(--text-main); }
+        ol.top-list { padding-left: 0; list-style: none; counter-reset: top-counter; }
+        ol.top-list li { position: relative; padding-left: 2.2rem; margin-bottom: 0.85rem; font-size: 0.95rem; line-height: 1.7; }
         ol.top-list li::before {
             counter-increment: top-counter;
             content: counter(top-counter);
@@ -444,71 +186,17 @@
             font-weight: 700;
             font-family: 'JetBrains Mono', monospace;
         }
-
-        .concepts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1rem;
-        }
-
-        .concept-card {
-            background: var(--bg-body);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1rem 1.2rem;
-        }
-
-        .concept-card h4 {
-            font-size: 0.95rem;
-            color: var(--primary);
-            margin-bottom: 0.4rem;
-            font-weight: 700;
-        }
-
-        .concept-card p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        .data-table-container {
-            overflow-x: auto;
-            margin-top: 1rem;
-        }
-
-        table.styled-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.9rem;
-        }
-
-        table.styled-table th,
-        table.styled-table td {
-            border: 1px solid var(--border-color);
-            padding: 0.75rem 1rem;
-            text-align: left;
-        }
-
-        table.styled-table th {
-            background: var(--bg-body);
-            color: var(--text-main);
-            font-weight: 700;
-        }
-
-        table.styled-table tr:hover {
-            background: var(--bg-card-hover);
-        }
-
-        ul.data-list {
-            padding-left: 1.25rem;
-        }
-
-        ul.data-list li {
-            margin-bottom: 0.75rem;
-            font-size: 0.92rem;
-            line-height: 1.65;
-        }
-
+        .concepts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+        .concept-card { background: var(--bg-body); border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem 1.2rem; }
+        .concept-card h4 { font-size: 0.95rem; color: var(--primary); margin-bottom: 0.4rem; font-weight: 700; }
+        .concept-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+        .data-table-container { overflow-x: auto; margin-top: 1rem; }
+        table.styled-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+        table.styled-table th, table.styled-table td { border: 1px solid var(--border-color); padding: 0.75rem 1rem; text-align: left; }
+        table.styled-table th { background: var(--bg-body); color: var(--text-main); font-weight: 700; }
+        table.styled-table tr:hover { background: var(--bg-card-hover); }
+        ul.data-list { padding-left: 1.25rem; }
+        ul.data-list li { margin-bottom: 0.75rem; font-size: 0.92rem; line-height: 1.65; }
         .action-box {
             background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.08) 0%, rgba(var(--primary-rgb), 0.02) 100%);
             border: 1px solid rgba(var(--primary-rgb), 0.3);
@@ -518,85 +206,23 @@
             gap: 1rem;
             align-items: flex-start;
         }
-
-        .action-box-icon {
-            font-size: 1.8rem;
-            line-height: 1;
-            flex-shrink: 0;
-        }
-
-        .action-box-content h4 {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 0.3rem;
-        }
-
-        .action-box-content p {
-            font-size: 0.92rem;
-            color: var(--text-main);
-            line-height: 1.65;
-        }
-
-        .bottom-pager {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 3rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--border-color);
-            gap: 1rem;
-        }
-
-        .sidebar-overlay {
-            display: none;
-            position: fixed;
-            top: 64px;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: 80;
-        }
-
+        .action-box-icon { font-size: 1.8rem; line-height: 1; flex-shrink: 0; }
+        .action-box-content h4 { font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 0.3rem; }
+        .action-box-content p { font-size: 0.92rem; color: var(--text-main); line-height: 1.65; }
+        .bottom-pager { display: flex; align-items: center; justify-content: space-between; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); gap: 1rem; }
+        .sidebar-overlay { display: none; position: fixed; top: 64px; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.6); z-index: 80; }
         @media (max-width: 900px) {
-            aside.sidebar {
-                position: fixed;
-                top: 64px;
-                bottom: 0;
-                left: 0;
-                transform: translateX(-100%);
-                box-shadow: 4px 0 20px rgba(0,0,0,0.5);
-            }
-
-            aside.sidebar.open {
-                transform: translateX(0);
-            }
-
-            .sidebar-overlay.active {
-                display: block;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            main.content-view {
-                padding: 1.5rem 1rem 3rem;
-            }
-
-            .article-title {
-                font-size: 1.45rem;
-            }
-
-            .article-section {
-                padding: 1.25rem 1.25rem;
-            }
+            aside.sidebar { position: fixed; top: 64px; bottom: 0; left: 0; transform: translateX(-100%); box-shadow: 4px 0 20px rgba(0,0,0,0.5); }
+            aside.sidebar.open { transform: translateX(0); }
+            .sidebar-overlay.active { display: block; }
+            .menu-toggle { display: block; }
+            main.content-view { padding: 1.5rem 1rem 3rem; }
+            .article-title { font-size: 1.45rem; }
+            .article-section { padding: 1.25rem 1.25rem; }
         }
     </style>
 </head>
 <body>
-
     <header class="app-header">
         <div class="header-brand">
             <button class="menu-toggle" id="menuToggle" aria-label="切換目錄選單">☰</button>
@@ -611,6 +237,9 @@
                 <span id="themeIcon">☀️</span>
                 <span id="themeText">切換亮色</span>
             </button>
+            <a href="https://github.com" target="_blank" rel="noopener" class="btn btn-primary" title="部署到 GitHub Pages">
+                <span>⭐ GitHub Ready</span>
+            </a>
         </div>
     </header>
 
@@ -634,23 +263,902 @@
                 <button class="filter-pill" data-cat="mindset">思維與認知</button>
             </div>
 
-            <ul class="episode-list" id="episodeList">
-                <!-- 動態注入集數列表 -->
-            </ul>
+            <ul class="episode-list" id="episodeList"></ul>
         </aside>
 
         <main class="content-view" id="contentView">
-            <div class="content-container" id="contentContainer">
-                <!-- 動態注入詳細內容 -->
-            </div>
+            <div class="content-container" id="contentContainer"></div>
         </main>
     </div>
 
     <script>
-        // 41 集完整精華資料庫 (EP.10 ~ EP.50)
-        // 包含詳細大綱、Top 核心觀念、名詞解析、歷史實測數據與行動指引
-        // 完整程式碼已直接配置就緒
-        // 詳情請見完整原始碼檔案
+        const EPISODES = [
+            {
+                "id": "ep10", "ep": 10, "category": "mindset", "category_name": "投資思維與認知",
+                "title": "EP.10｜主動型ETF 可以買嗎｜敷衍了事才能完事",
+                "summary": "探討主動型 ETF 與被動投資的本質差異。大仁提出『敷衍了事』的哲學：將不具長遠複利價值的瑣碎事務建立自動化機制，把心力與認知資源保留給能產生重大成果的核心事物。",
+                "top_takeaways": [
+                    "主動型 ETF 的高昂管理費與頻繁換股摩擦成本，長期難以持續戰勝被動大盤指數。",
+                    "『敷衍了事』不是消極怠惰，而是對次要問題建立自動化策略，避免認知資源耗竭。",
+                    "投資不應成為全職負擔，被動指數投資讓你用最少心力賺取整個市場的 beta 報酬。"
+                ],
+                "key_concepts": [
+                    {"term": "主動型 ETF (Active ETF)", "desc": "由基金經理人主觀挑選股票並試圖打敗市場的工具，費用高且長期統計勝率偏低。"},
+                    {"term": "認知帶寬 (Cognitive Bandwidth)", "desc": "人腦每日有限的決策能量，過度消耗在盯盤上會降低重大決策品質。"}
+                ],
+                "action_guide": "停止花數小時追蹤個股新聞與選股明牌，將核心資金交給低成本大盤指數或標準槓桿ETF，騰出時間專注本業技能。"
+            },
+            {
+                "id": "ep11", "ep": 11, "category": "mindset", "category_name": "投資思維與認知",
+                "title": "EP.11｜過去報酬可以代表未來｜長期堅持比熱情更重要",
+                "summary": "深入討論歷史數據在投資中的真正意義。熱情容易隨短期回檔冷卻，依靠制度、紀律與底層邏輯形成的長期堅持，才能在市場週期中存活並收穫成果。",
+                "top_takeaways": [
+                    "『過去不代表未來』適用於個股短期走勢，但全人類生產力提升與資本擴張的百年大趨勢具有極高韌性。",
+                    "熱情燃燒迅速但容易熄滅，真正的長期投資需要的是紀律、制度與冷靜的耐力。",
+                    "耐不住寂寞的人，往往在市場最暴烈的主升段來臨前被洗出場外。"
+                ],
+                "key_concepts": [
+                    {"term": "長週期統計韌性", "desc": "百年歷史主要股市，長期年化回報率穩定落在 7%~10% 區間。"},
+                    {"term": "熱情衰退期", "desc": "剛接觸新投資法時的興奮感，會在經歷第一場 20% 回檔時被恐懼取代。"}
+                ],
+                "action_guide": "建立無需意志力維繫的定期投資機制，在市場大跌時關閉看盤軟體，專注於執行既定的投資計劃。"
+            },
+            {
+                "id": "ep12", "ep": 12, "category": "mindset", "category_name": "投資思維與認知",
+                "title": "EP.12｜投資要自己做好功課｜給每個平行時空的我",
+                "summary": "剖析為什麼跟單抄作業永遠無法實現財務自由。當你沒有親自推導並相信投資邏輯時，任何市場雜音都能將你擊倒。為自己的財務決定負 100% 的責任。",
+                "top_takeaways": [
+                    "別人給的答案再正確，只要你內心沒有理解，跌 10% 你就會開始懷疑人生並賤價停損。",
+                    "投資功課的核心不是預測點位，而是搞清楚自己的風險承受極限與資金期限。",
+                    "牛市賺到的僥倖錢，熊市憑實力全部還給市場。"
+                ],
+                "key_concepts": [
+                    {"term": "投資認知閉環", "desc": "從閱讀推導、小額試錯到承擔波動，最終形成堅不可摧的心智模型。"},
+                    {"term": "平行時空視角", "desc": "以跨時間維度審視當下的金錢配置，對話不同年齡段的自己。"}
+                ],
+                "action_guide": "親自寫下投資策略：為什麼買進？最糟情況下跌 50% 該怎麼應對？回答不出來就先不要投入大額資金。"
+            },
+            {
+                "id": "ep13", "ep": 13, "category": "leverage", "category_name": "槓桿與正二 (00631L)",
+                "title": "EP.13｜長期投資者需要債券嗎？｜讓欺負你的人付出代價（Let him pay）",
+                "summary": "挑戰傳統 60/40 股債配置在年輕累積期的合理性。當投資期長達 20~30 年時，持有大量低回報債券會帶來巨大的機會成本。面對外界質疑，讓長期的真實成就為你說話。",
+                "top_takeaways": [
+                    "在長期累積期，債券最大的風險不是波動，而是無法抵禦資本擴張的機會成本。",
+                    "債券的核心價值在於退休提領期的防禦與再平衡乾柴，而非累積期累積本金的主力。",
+                    "面對別人的嘲弄與看衰，最好的復仇就是讓自己的資產與心智成長到對方望塵莫及的高度。"
+                ],
+                "key_concepts": [
+                    {"term": "債券機會成本", "desc": "持有低回報資產導致錯失股市長期高幾何平均回報的複利損失。"},
+                    {"term": "Let him pay 心態", "desc": "將外部負面評價轉化為追求卓越的強大燃料。"}
+                ],
+                "action_guide": "若仍在資產累積期（>15年），審慎評估過高債券部位是否正在大幅拖慢你的財富累積速度。"
+            },
+            {
+                "id": "ep14", "ep": 14, "category": "debt", "category_name": "房產與負債管理",
+                "title": "EP.14｜質押的不確定性｜把你的腦袋洗乾淨",
+                "summary": "詳細拆解股票質押借貸的潛在風險與維持率機制。對比質押、信貸與槓桿 ETF 的底層架構差異，指出質押面對股災時被強制追繳平倉的致命缺點。",
+                "top_takeaways": [
+                    "質押借貸最大的罩門在於『浮動維持率』，一旦遇上股災，極易發生強行平倉斷頭。",
+                    "信用貸款具有固定還款期與不隨股價波動追繳的特性，抗極端風險能力遠高於股票質押。",
+                    "槓桿 ETF 內嵌期貨且永不追繳、無個人破產風險，是更純粹安全的槓桿工具。"
+                ],
+                "key_concepts": [
+                    {"term": "維持率 (Margin Ratio)", "desc": "質押股票市值與借款金額的比例，跌破法定門檻會收到追繳通知。"},
+                    {"term": "穿倉與追繳機制", "desc": "保證金槓桿可能虧光本金並倒欠券商，槓桿 ETF 則最大虧損僅限本金。"}
+                ],
+                "action_guide": "若使用質押，務必將維持率拉高至 300% 以上，並隨時備有可隨時動用的外部現金流，切忌借到滿額。"
+            },
+            {
+                "id": "ep15", "ep": 15, "category": "mindset", "category_name": "投資思維與認知",
+                "title": "EP.15｜葡萄是什麼顏色？｜遺產也是投資組合的一部分",
+                "summary": "跳出單一證券帳戶的狹隘視角，從包含房產、保險、未來現金流乃至代際財富傳承的『全人生資產負債表』評估風險承受度。",
+                "top_takeaways": [
+                    "評估個人風險承受度時，必須將家庭網絡的支撐力與潛在資產納入總體考量。",
+                    "擁有隱性後盾的人如果過度保守，是對資源的浪費；缺乏後盾的人則更需精準管理下檔風險。",
+                    "資產配置是動態的人生全景圖，不是靜態的股票買賣代號。"
+                ],
+                "key_concepts": [
+                    {"term": "整體資產負債表", "desc": "涵蓋人力資本、房產、金融資產、保險保障與代際傳承的整合架構。"},
+                    {"term": "隱性資產 (Implicit Assets)", "desc": "家庭體系提供的安全網，實質上增強了個人在市場承受波動的能力。"}
+                ],
+                "action_guide": "盤點自己家庭的整體資產架構，計算出真正的淨資產防禦深度，以此重新校準股票曝險比例。"
+            },
+            {
+                "id": "ep16", "ep": 16, "category": "mindset", "category_name": "思維與認知",
+                "title": "EP.16｜用金錢買下一輩子的回憶｜人生就是一場無限賽局",
+                "summary": "借鏡《別把你的錢留到死》（Die with Zero）哲學，探討金錢與人生體驗的兌換關係。年輕時創造的回憶會產生一輩子的『記憶股息』，比臨終前的數字更具價值。",
+                "top_takeaways": [
+                    "記憶股息（Memory Dividend）：年輕時去體驗生活，這份回憶將在未來數十年持續帶來心理滿足。",
+                    "人生是一場無限賽局，目標不是在終點贏過所有人，而是讓自己與珍愛的人玩得更充實長久。",
+                    "健康與體能是不可逆的資產，有些事年輕能做，老年就算有億萬身家也無法體驗。"
+                ],
+                "key_concepts": [
+                    {"term": "記憶股息 (Memory Dividend)", "desc": "早期生活體驗在漫長人生中不斷被提取回味所帶來的持續心理複利。"},
+                    {"term": "金錢效用遞減曲線", "desc": "隨著年齡漸長與健康下降，每一單位金錢所能換取的快樂急劇減少。"}
+                ],
+                "action_guide": "每年編列一筆專門用於『創造不可磨滅記憶』的生活預算，及早體驗生活，不要把一切延宕到退休。"
+            },
+            {
+                "id": "ep17", "ep": 17, "category": "debt", "category_name": "房產與負債管理",
+                "title": "EP.17｜年輕人有借貸溢酬的優勢｜讓花錢為你帶來控制感",
+                "summary": "分析年輕世代獨有的財務優勢：龐大的人力資本與長跨度。透過低利借貸提早取得金融資本，享受市場成長與借款利率之間的『借貸溢酬』。",
+                "top_takeaways": [
+                    "年輕人最大的本錢不是存款，而是未來 30~40 年穩定工作產生的強大現金流（人力資本）。",
+                    "透過信貸提前換取資本，是把未來的時間價值貼現到現在參與市場增長。",
+                    "恐懼花錢的人往往被金錢控制；將錢花在提高效率與認知上，才能獲得真正的控制感。"
+                ],
+                "key_concepts": [
+                    {"term": "借貸溢酬 (Leverage Risk Premium)", "desc": "以低於股市回報的利率借款長期投資所創造的超額財富增量。"},
+                    {"term": "消費主控權", "desc": "不再因省小錢消耗大量時間，把金錢視為為自己爭取自由的工具。"}
+                ],
+                "action_guide": "評估自身工作穩定性與薪資成長潛力，計算每月可從容承擔的還款額度，了解是否具備開啟初階槓桿的條件。"
+            },
+            {
+                "id": "ep18", "ep": 18, "category": "leverage", "category_name": "槓桿與正二 (00631L)",
+                "title": "EP.18｜0050正2 跑去買台積電會怎樣？｜本金小的人沒資格保守",
+                "summary": "剖析 0050正2 透過期貨追蹤加權指數的本質。直言指出本金只有幾十萬時，過度保守只會被通膨吞噬，窮人沒有資格過度保守，應勇於承擔系統性風險完成原始積累。",
+                "top_takeaways": [
+                    "0050正2 買的是台指期貨，反映台灣前五十大市值企業成長，非直接持有現貨台積電。",
+                    "本金小的時候，最大的風險是『資產累積速度過慢』，而不是市場短期波動。",
+                    "在可承受範圍內勇敢擁抱市場系統性波動，是小資族完成資本原始累積的必經之路。"
+                ],
+                "key_concepts": [
+                    {"term": "市值型指數自動調權", "desc": "指數會隨著強勢企業崛起自動增加權重，淘汰衰退公司，形成永續競爭組合。"},
+                    {"term": "本金天花板", "desc": "本金過小的情況下，即便年化回報率達標，絕對金額依然微不足道。"}
+                ],
+                "action_guide": "不要在資產剛起步階段就採用退休老人的超防禦策略，應以累積高 beta 市值型部位為核心目標。"
+            },
+            {
+                "id": "ep19", "ep": 19, "category": "leverage", "category_name": "槓桿與正二 (00631L)",
+                "title": "EP.19｜0050正2 會買六成的台積電？｜是面子重要，還是賺錢重要？",
+                "summary": "討論台股『一人武林』現象對 ETF 的影響。台積電佔比高是市場全球競爭力定價的結果，刻意避開只為了形式上的分散往往犧牲了回報。投資追求的是客觀結果，而非向旁人炫耀。",
+                "top_takeaways": [
+                    "市場走勢是客觀冷酷的，它不會因為你的道德偏好或教條主義改變方向。",
+                    "投資的終極指標是資產淨值能否支持人生自由，而不是向旁人炫耀投資組合多麼分散。",
+                    "放下自命不凡的偏見，順應市場最強的驅動力。"
+                ],
+                "key_concepts": [
+                    {"term": "偽分散投資 (Diworsification)", "desc": "為了分散而買入平庸資產，反而拉低回報且未顯著降低風險。"},
+                    {"term": "強者恆強效應", "desc": "具全球護城河的高科技半導體巨頭具備持續吸納全球資本的能力。"}
+                ],
+                "action_guide": "審視投資組合中是否為了『看起來分散』而買進了自己根本不看好的平庸資產？勇敢汰弱留強。"
+            },
+            {
+                "id": "ep20", "ep": 20, "category": "mindset", "category_name": "投資思維與認知",
+                "title": "EP.20｜什麼是「大贏小輸」的不對稱賭局｜不要輕易給予他人意見",
+                "summary": "介紹塔雷伯的不對稱性理論：打造『損失有限，獲利潛力無限』的凸性結構。同時提醒不要向缺乏認知的人推薦高波動工具，認知不匹配時，好工具也會變成災難。",
+                "top_takeaways": [
+                    "成功的策略不是追求 99% 勝率，而是確保『輸只輸表皮，贏能翻數倍』。",
+                    "凸性結構（Convexity）：當潛在收益遠大於潛在損失，時間與波動就是你最好的朋友。",
+                    "不要輕易給人投資建議，對方的認知若無法承擔波動，只會引發人際災難。"
+                ],
+                "key_concepts": [
+                    {"term": "不對稱報酬 (Asymmetric Payoff)", "desc": "下檔虧損有底線鎖定，而上檔收益敞開無上限的收益結構。"},
+                    {"term": "責任與認知邊界", "desc": "每個人現金流與心理極限不同，不要將自己的策略硬套在他人身上。"}
+                ],
+                "action_guide": "設計資產配置時，確保即使遭遇 50% 股災也不會破產被逼賣股；並守住邊界，不輕易向外行人報牌。"
+            },
+            {
+                "id": "ep21", "ep": 21, "category": "leverage", "category_name": "槓桿與正二 (00631L)",
+                "title": "EP.21｜現在馬上賣掉00631L｜投資全世界VT 有比較好嗎？",
+                "summary": "對比『分散全球（VT）』與『專注台股槓桿（00631L）』的底層邏輯。VT 擁有極佳國家分散度，00631L 則享有台股逆價差紅利與高資本效率，依據個人信念做出權衡。",
+                "top_takeaways": [
+                    "VT 擁有無可挑剔的國家分散性，是抵禦單一國家地緣政治崩潰的最強護甲。",
+                    "00631L 享有台股除權息逆價差紅利與高資本效率，但需承擔單一市場波動。",
+                    "如果天天擔心台海危機睡不著覺，請立刻換成 VT，心理平靜比多賺錢更重要。"
+                ],
+                "key_concepts": [
+                    {"term": "全球分散 (VT)", "desc": "涵蓋全球九千多檔股票，能承受任何單一國家的興衰輪替。"},
+                    {"term": "逆價差紅利 (Backwardation)", "desc": "台指期貨長期因除權息點數形成的貼水，為槓桿 ETF 帶來額外套利增益。"}
+                ],
+                "action_guide": "評估自己對台灣長期國運與地緣政治的信念，若無法承受單一市場風險，可考慮 VT 搭配適度槓桿。"
+            },
+            {
+                "id": "ep22", "ep": 22, "category": "debt", "category_name": "房產與負債管理",
+                "title": "EP.22｜資本主義就是借錢｜信貸利率3％ 以上是盤子嗎？",
+                "summary": "打破對負債的道德污名化。資本主義底層就是信貸擴張，只要資產長期實質回報率（8%~10%）大於借貸利率（2%~3.5%），借貸就是合理的套利加速器。",
+                "top_takeaways": [
+                    "富人透過借款擴大資本回報，只有窮人才把『零負債』當成最高美德。",
+                    "長期股市報酬率約 8%~10%，只要能借到 3% 的資金，中間的利差就是財富擴張器。",
+                    "真正該恐懼的是資金長期躺在低利帳戶被實質通膨洗劫。"
+                ],
+                "key_concepts": [
+                    {"term": "資本利差套利", "desc": "利用低借款成本投資於預期回報更高的生產性資產，賺取差額。"},
+                    {"term": "好負債 vs 壞負債", "desc": "好負債購買能生錢的資產；壞負債購買隨時間貶值的消費品。"}
+                ],
+                "action_guide": "試算自己若借 100 萬、利率 3%、7 年攤還，月繳約 1.3 萬，評估自身現金流能否輕鬆覆蓋。"
+            },
+            {
+                "id": "ep23", "ep": 23, "category": "debt", "category_name": "房產與負債管理",
+                "title": "EP.23｜理財思維的三個等級｜信貸7 年跟10 年差在哪裡？",
+                "summary": "將理財劃分為三個等級：Lv1 節流省錢、Lv2 投資開源、Lv3 資產負債表管理與資本重組。分析信貸從 7 年拉長至 10 年對大幅降低月還款壓力的重要保護作用。",
+                "top_takeaways": [
+                    "理財三個層次：窮人天天為幾十元省錢，一般人找高股息，富人調配長短期負債極大化效率。",
+                    "信貸從 7 年拉長到 10 年，每月本息負擔減輕近 30%，大幅拉高現金流安全邊際。",
+                    "現金流是生命線，只要現金流不斷，時間就是你最強大的盟友。"
+                ],
+                "key_concepts": [
+                    {"term": "理財三維度", "desc": "從節流（減法）、開源（加法）晉升到資本架構與槓桿配置（乘法）。"},
+                    {"term": "現金流緩衝度", "desc": "每月餘裕佔總支出與債務攤還的比例，決定遭遇意外時的抗震力。"}
+                ],
+                "action_guide": "借貸優先向銀行爭取最長年限（如 7~10 年期），將月攤本息壓至最低，確保極限行情不被斷頭。"
+            },
+            {
+                "id": "ep24", "ep": 24, "category": "debt", "category_name": "房產與負債管理",
+                "title": "EP.24｜你要成為家人的中央銀行｜淺談負債比與流動率",
+                "summary": "引入央行『最後貸款人』機制。健康的財務體質不是手上一毛債都沒有，而是具備充足的流動性儲備與借貸彈性，在親人遇上急難時充當家庭的避風港。",
+                "top_takeaways": [
+                    "央行核心職能是在流動性枯竭時提供信用，家庭支柱也必須具備這種能力。",
+                    "隨時保留 6~12 個月的現金與可用信用額度，信用額度平時備而不用，關鍵時能救全家。",
+                    "控制總負債比在安全範圍內，保持資產的高變現彈性。"
+                ],
+                "key_concepts": [
+                    {"term": "家庭最後貸款人", "desc": "在家庭成員遭遇重大衝擊時，能立即提供低成本流動資金的能力。"},
+                    {"term": "流動比率", "desc": "流動資產對短期負債與緊急支出的覆蓋倍數。"}
+                ],
+                "action_guide": "維持良好的聯徵信用分數，並建立專屬的家庭緊急備用帳戶，不可輕易挪用。"
+            },
+            {
+                "id": "ep25", "ep": 25, "category": "mindset", "category_name": "投資思維與認知",
+                "title": "EP.25｜不要以為你投資的一塊錢，跟別人的一塊錢一樣",
+                "summary": "拆解『資金性質』的關鍵影響。救命錢、借來的錢與三十年不用的閒錢，心理抗震力完全不同。投資失敗往往源自用短天期的資金去承擔長天期的波動風險。",
+                "top_takeaways": [
+                    "每一塊錢背後綁定的時間屬性與心理壓力不同，決定了在市場中的耐震度。",
+                    "用三個月後要用的錢買股票跌 5% 就崩潰；用三十年不用的錢買正二跌 50% 也能從容應對。",
+                    "先淨化資金性質，才能確保心智在極端回檔中依然理性清醒。"
+                ],
+                "key_concepts": [
+                    {"term": "資金期限匹配 (Duration Matching)", "desc": "投資期限必須與資金使用需求期限嚴格對應，避免期限錯配。"},
+                    {"term": "心理帳戶摩擦", "desc": "虧損觸及特定用途資金時引發的劇烈恐慌反應。"}
+                ],
+                "action_guide": "將手頭資金嚴格分類為：1年內必用、3~5年備用、10年以上長期增值，僅最後一類可投入高波動標的。"
+            },
+            {
+                "id": "ep26", "ep": 26, "category": "leverage", "category_name": "槓桿與正二 (00631L)",
+                "title": "EP.26｜被正2 嘎空手的人，最容易變成恐怖情人",
+                "summary": "剖析空手投資人面對槓桿標的暴漲時的心理防禦機制。因嫉妒與懊悔轉而天天咒罵市場，解方是用科學的資產配置建立基本倉位，讓自己隨時留在車上。",
+                "top_takeaways": [
+                    "看著別人賺錢而自己空手，在人腦神經學中引發的痛覺等同於被肢體傷害。",
+                    "酸民天天詛咒市場崩盤，本質上只是想證明自己過去的保守不是錯誤的。",
+                    "用科學的資產配置建立底倉，徹底免除被大行情甩落車的心理煎熬。"
+                ],
+                "key_concepts": [
+                    {"term": "FOMO 與自戀防禦", "desc": "錯失恐懼引發的嫉妒，迫使大腦建構防禦敘事貶低他人成功。"},
+                    {"term": "永遠留在市場 (Always in the Game)", "desc": "保留一定比例核心部位，享受長期複利增長。"}
+                ],
+                "action_guide": "停止情緒化抱怨，誠實面對投資盲點，將注意力拉回優化自身的資產配置。"
+            },
+            {
+                "id": "ep27", "ep": 27, "category": "mindset", "category_name": "投資思維與認知",
+                "title": "EP.27｜開課就是割韭菜？｜請摘下你的魔戒",
+                "summary": "探討知識付費與認知變現。真正的投資能力是將常識與底層邏輯融會貫通。摘下試圖依靠暴富明牌的貪婪魔戒，接受致富是一場漫長而需要耐心的修煉。",
+                "top_takeaways": [
+                    "優質知識能幫你節省摸索時間，但無法代替你承受真實市場的回檔考驗。",
+                    "宣稱能精準預測轉折點的課程，本質上都是在利用人性的貪婪與僥倖心理。",
+                    "真正的割韭菜不是收了學費，而是用錯誤認知在市場裡虧掉大筆本金。"
+                ],
+                "key_concepts": [
+                    {"term": "貪婪魔戒效應", "desc": "渴望獲得不用承擔風險就能賺取暴利的虛妄心理。"},
+                    {"term": "知識內化與執行力", "desc": "聽懂觀念與在市場暴跌 30% 時穩住心態有巨大鴻溝。"}
+                ],
+                "action_guide": "評估學習資源時，只看其傳遞的是否為具有學術與歷史驗證的底層規律，遠離短線飆股報牌群組。"
+            },
+            {
+                "id": "ep28", "ep": 28, "category": "leverage", "category_name": "槓桿與正二 (00631L)",
+                "title": "EP.28｜永遠不要空手｜用資產配置去面對長期波動",
+                "summary": "解構市場擇時交易的陷阱。統計證明錯過表現最好的十幾個交易日，回報率將腰斬。透過 50:50 槓桿與現金再平衡策略，達成『永遠在場，隨時有錢撿便宜』。",
+                "top_takeaways": [
+                    "擇時進出必須做對兩次決定（高點賣、低點買），人類心理極難做到。",
+                    "股市大漲往往發生在最絕望恐慌的短短幾天內，空手的人注定錯過。",
+                    "50:50 策略讓你上漲有得賺、下跌有錢撿，透過規則化再平衡克服人性貪婪恐懼。"
+                ],
+                "key_concepts": [
+                    {"term": "關鍵天數遺失風險", "desc": "錯失漲幅最大的數天，長年期年化回報率將劇烈衰減。"},
+                    {"term": "動態再平衡 (Rebalancing)", "desc": "設定固定比例機械化調節股現比重，自動達成低買高賣。"}
+                ],
+                "action_guide": "規劃一個永遠不全額空手的配置（如 50/50），設定固定週期（半年或一年）進行再平衡。"
+            },
+            {
+                "id": "ep29", "ep": 29, "category": "mindset", "category_name": "思維與認知",
+                "title": "EP.29｜槓桿是為了讓人生過得更好｜我希望大家都能賺錢",
+                "summary": "回歸投資初衷。槓桿不是為了炫耀財富或追求刺激，而是為了奪回人生的時間自主權，讓家人過得更從容尊嚴。世界不是零和賽局，傳遞真誠利他的理財哲學。",
+                "top_takeaways": [
+                    "如果賺了錢卻天天焦慮、家庭失和，這場投資就徹底失敗了。",
+                    "槓桿是手術刀，懂的人拿來治病救命，不懂的人只會割傷動脈。",
+                    "透過生產力擴張，大家都能在長期投資中共同分享經濟成長果實。"
+                ],
+                "key_concepts": [
+                    {"term": "財富自主權 (Time Autonomy)", "desc": "擁有自由支配時間、對不喜歡的事說『不』的能力。"},
+                    {"term": "非零和共贏思維", "desc": "指數投資是與全體優秀企業共同前進，而非賭桌零和搏殺。"}
+                ],
+                "action_guide": "檢視當前投資狀態：晚上是否睡得安穩？若持續焦慮，適度降低槓桿水位直到心理舒適。"
+            },
+            {
+                "id": "ep30", "ep": 30, "category": "mindset", "category_name": "投資思維與認知",
+                "title": "EP.30｜當一個能看見未來的人｜長期投資者的自我敘事",
+                "summary": "探討心理學中的『自我敘事』。在數年熊市中，決定你是恐慌賣出還是堅定持有的，是內心如何詮釋歷史與未來。學會向後看百年歷史、向前看三十年技術浪潮。",
+                "top_takeaways": [
+                    "你看待世界的故事，決定了你做出怎樣的財務決策。",
+                    "在眾人沉浸在短線悲觀時，能看見人類文明演進的人，才能在底部撿到便宜籌碼。",
+                    "你不是在股市碰運氣的賭徒，而是堅定持有全人類生產力結晶的合夥人。"
+                ],
+                "key_concepts": [
+                    {"term": "自我敘事架構 (Narrative Identity)", "desc": "對自身角色與困境賦予的意義體系，決定面對逆境時的韌性。"},
+                    {"term": "時間折現率", "desc": "目光越短淺越看重眼前回饋，具遠見者願意為未來犧牲短期浮躁。"}
+                ],
+                "action_guide": "市場回檔時，停止翻閱每日討論區，改為閱讀人類科技與金融危機史，給自己注入確定性。"
+            },
+            {
+                "id": "ep31", "ep": 31, "category": "mindset", "category_name": "投資思維與認知",
+                "title": "EP.31｜窮人沒資格保守｜當你的認知配不上財富",
+                "summary": "資產規模越小，越承受不起將所有錢放在低收益工具裡被通膨稀釋的實質虧損。認知與財富必須匹配，德不配位、智不配財，憑運氣賺到的終將被市場收回。",
+                "top_takeaways": [
+                    "只有十萬存款時，追求一年 1% 利息無法改變命運，這不是穩健而是怠惰。",
+                    "低資產族群首要之務：全力提升本業人力資本，並用高效工具擁抱市場 beta。",
+                    "想要承載千萬甚至億元級資產，必須先將心智與知識儲備升級至對應維度。"
+                ],
+                "key_concepts": [
+                    {"term": "實質購買力流失", "desc": "名義上看似沒賠，但在物價長期上漲下資產實際購買力大幅縮水。"},
+                    {"term": "認知財富平衡法則", "desc": "財富是一個人對世界認知能力的變現，短暫運氣終會均值回歸。"}
+                ],
+                "action_guide": "把抱怨低薪的時間轉移到研讀經典投資書籍與強化職涯專業，從根源提升資本吸納能力。"
+            },
+            {
+                "id": "ep32", "ep": 32, "category": "mindset", "category_name": "投資思維與認知",
+                "title": "EP.32｜人要有錢才有膽｜槓桿那麼好賺為什麼你賺不到？",
+                "summary": "解構膽量與資產底氣的因果關係。高手敢開槓桿是因為有充足的儲備、後備現金流與嚴謹倉位。窮人開槓桿往往孤注一擲，一次震盪就直接被恐懼擊垮。",
+                "top_takeaways": [
+                    "膽識本質上是由雄厚的安全邊際與後備資金堆砌出來的理性從容。",
+                    "能賺到槓桿紅利的人，倉位都維持在極度舒服範圍，暴跌時還能源源不絕加碼。",
+                    "不是槓桿不好賺，而是多數人用賭徒心態操作需要精密計算的專業工具。"
+                ],
+                "key_concepts": [
+                    {"term": "虛擬膽量 vs 真實底氣", "desc": "盲目冒險在逆境中會瓦解；基於資產負債表強韌度的自信才能穿越牛熊。"},
+                    {"term": "倉位舒適度", "desc": "部位大小應以『遭遇單日 5% 跌幅晚上依然能安然入睡』為檢驗標準。"}
+                ],
+                "action_guide": "計算手頭部位若回檔 30% 名義損失多少？若會讓你心慌，立即減倉直至心理能完全承受。"
+            },
+            {
+                "id": "ep33", "ep": 33, "category": "debt", "category_name": "房產與負債管理",
+                "title": "EP.33｜讓未來的自己，去幫助現在的你｜成為家人的神隊友NO PAIN NO GAIN 啦",
+                "summary": "從跨時間維度探討借貸哲學：透過金融工具，讓未來賺錢能力更強的自己提前借資源給現在的自己，在資本市場播下複利種子，及早為家庭築起防禦牆。",
+                "top_takeaways": [
+                    "三十年後的你資產遠超現在，有建設性的借貸是讓未來的自己助力現在的起步。",
+                    "借貸是跨時空資源調配，把未來人力資本提早變現為現在的生息資產。",
+                    "在年輕時承擔微小的確定性壓力（還款），是為了在年老時免於承受巨大的不確定性絕境。"
+                ],
+                "key_concepts": [
+                    {"term": "時空資源轉移", "desc": "透過信貸合約，在人生不同時間區段之間平滑消費與投資能力。"},
+                    {"term": "建設性痛苦", "desc": "主動選擇承擔能帶來資產增長與能力提升的壓力，淘汰無意義焦慮。"}
+                ],
+                "action_guide": "設想十年後自己的財務目標，寫下一封信確認當下所做的每一筆投資是否對得起未來的自己。"
+            },
+            {
+                "id": "ep34", "ep": 34, "category": "debt", "category_name": "房產與負債管理",
+                "title": "EP.34｜你要成為家人的中央山脈｜「養兒防老」背後的金融邏輯",
+                "summary": "剖析傳統『養兒防老』觀念在現代的崩解。父母做好個人養老儲備，不成為下一代的財務包袱，正如中央山脈為台灣阻擋颱風，孩子才能無後顧之憂地翱翔衝刺。",
+                "top_takeaways": [
+                    "將養老依賴於子女，是將巨大的金融風險轉嫁給抗風險能力最弱的新世代。",
+                    "真正成熟的父母把自己打造成中央山脈，為下一代創造穩定發展的緩衝區。",
+                    "父母獨立自足的退休資產，就是給予孩子人生最奢侈的一筆啟動基金。"
+                ],
+                "key_concepts": [
+                    {"term": "中央山脈效應", "desc": "家庭核心主動吸收消化外部經濟衝擊，為下一代提供保護屏障。"},
+                    {"term": "代際金融負擔移轉", "desc": "上一代缺乏財務規劃，導致下一代剛出社會便被迫承擔養老缺口。"}
+                ],
+                "action_guide": "優先計算退休金缺口並啟動獨立準備，將子女教育金與個人養老資產嚴格分開管理。"
+            },
+            {
+                "id": "ep35", "ep": 35, "category": "debt", "category_name": "房產與負債管理",
+                "title": "EP.35｜每個人都欠市場「一間房」｜人生就是跨越時空的傳承",
+                "summary": "揭示房地產的本質：每個人終生都在消費居住權，不買房也是在幫房東付房貸。買房是普通人唯一能以極低利率開 30 年 5 倍槓桿的合規工具，更是跨世代傳承的基石。",
+                "top_takeaways": [
+                    "只要你活著就是在做空房地產（持續消耗租金）；買自住房只是將這項空頭部位回補平倉。",
+                    "房貸是政府與銀行給予普通公民最慷慨的 30 年低利槓桿，放棄使用是放棄資本紅利。",
+                    "自住房鎖定居住成本，三十年後的房貸月供在實質購買力上微不足道。"
+                ],
+                "key_concepts": [
+                    {"term": "做空房產的本質", "desc": "無房者終生持續支付市場浮動租金，承受租金隨通膨上漲的被動曝險。"},
+                    {"term": "實質債務通膨稀釋", "desc": "在長期通膨下，固定名義本息的實質負擔會隨年限推移而逐年驟減。"}
+                ],
+                "action_guide": "若尚未置產，將購買第一間負擔得起的自住房列為中長期核心目標，勿盲目賭房價崩盤。"
+            },
+            {
+                "id": "ep36", "ep": 36, "category": "mindset", "category_name": "思維與認知",
+                "title": "EP.36｜你的人生是高槓桿，還是低槓桿？｜我們為什麼要結婚？",
+                "summary": "以金融學視角看婚姻。婚姻本質是兩人成立合併人力與金融資本的『無限責任合夥企業』。高槓桿人生承擔更多責任以換取更高上限，關鍵在於伴侶間的信任與風控。",
+                "top_takeaways": [
+                    "低槓桿人生追求少責任，但也往往錯失生命深度與複利爆發的可能。",
+                    "高槓桿人生承擔更多責任，只要風控得宜，能創造出遠超個人的宏大價值。",
+                    "結婚是兩條現金流與兩份人力資本的戰略重組，具備極強的抗風險互補性。"
+                ],
+                "key_concepts": [
+                    {"term": "家庭無限責任合夥", "desc": "夫妻在經濟上成為利益共同體，實現規模經濟與雙向失業保險。"},
+                    {"term": "人生槓桿乘數", "desc": "承擔責任的廣度與深度，決定了一個人能動用的社會資源與回報上限。"}
+                ],
+                "action_guide": "與伴侶召開家庭財務戰略會議，盤點雙方收入、負債、信用與未來十年的資產目標。"
+            },
+            {
+                "id": "ep37", "ep": 37, "category": "mindset", "category_name": "思維與認知",
+                "title": "EP.37｜生小孩，是人生最大的槓桿｜你認為自己是誰，就會選擇怎樣的人生",
+                "summary": "生養小孩在會計上是負現金流，但在生命體驗與潛能激發上是終極槓桿。孩子放大了你的疲憊，但也十倍放大了愛與奮鬥動力。你如何定義自己，決定了你的選擇。",
+                "top_takeaways": [
+                    "用冰冷的試算表算生小孩划不划算，是用二維工具度量三維的生命體驗。",
+                    "生小孩是一場終極槓桿：放大了壓力，但也十倍放大了愛、動力與生命厚度。",
+                    "孩子是父母最好的鏡子，為了成為他們的榜樣，你會逼自己成為更強大的人。"
+                ],
+                "key_concepts": [
+                    {"term": "非財務維度回報", "desc": "情感連接、世代傳承與心智淬鍊所帶來的超越性回報，無法用金錢度量。"},
+                    {"term": "角色同一性重塑", "desc": "成為父母後，個人的時間優先級與風險防範意識會發生不可逆的升級。"}
+                ],
+                "action_guide": "將家庭責任轉化為驅動本業成長與長期財務規劃的正向動能，而非單純視為財務負擔。"
+            },
+            {
+                "id": "ep38", "ep": 38, "category": "leverage", "category_name": "槓桿與正二 (00631L)",
+                "title": "EP.38｜正2的正價差與耗損，到底有多嚴重？｜成為孩子的榜樣，成為更好的自己",
+                "summary": "以真實數據破除槓桿 ETF 震盪耗損的迷思。台指期貨特有的逆價差（貼水）結構為正2提供了持續的轉倉收益紅利，實證說明過去十年 0050正2 大幅跑贏兩倍 0050 的原因。",
+                "top_takeaways": [
+                    "震盪耗損只在無趨勢上下拉鋸時成立，在長期向上的市場中，複利效應會產生正向增益。",
+                    "台股每年除權息使得台指期貨長期處於逆價差，為正2提供了持續的轉倉收益紅利。",
+                    "過去十年 0050正2 真實總報酬是 0050 的三倍以上，事實證明了工具的強韌性。"
+                ],
+                "key_concepts": [
+                    {"term": "複利效應 (Compounding Effect)", "desc": "在連續上漲的多頭中，每日雙倍追蹤會產生『漲得比兩倍更多』的增益。"},
+                    {"term": "除權息轉倉紅利", "desc": "期貨貼水在合約到期收斂時為多頭部位帶來自然套利收益。"}
+                ],
+                "action_guide": "調出 0050正2 自 2014 年上市以來的長期走勢圖與 0050 對比，用數據消除公式恐慌。"
+            },
+            {
+                "id": "ep39", "ep": 39, "category": "debt", "category_name": "房產與負債管理",
+                "title": "EP.39｜本金損失有限，上漲空間無限｜先用負債養資產，再用資產養負債",
+                "summary": "兩階段資本躍遷路徑：第一階段本金少時，用低成本長期負債加速買進核心資產；第二階段當資產規模足夠龐大時，由資產產生的增值與現金流覆蓋所有負債本息。",
+                "top_takeaways": [
+                    "有限責任制度讓投資最多虧光本金，但獲利空間是數倍甚至幾十倍。",
+                    "第一階段：在月薪從容負擔下用信貸與房貸啟動槓桿，強迫買入生產性資產。",
+                    "第二階段：當資產滾大至千萬級，年增長額遠大於還款額，資產接管了一切支出。"
+                ],
+                "key_concepts": [
+                    {"term": "兩階段資本躍遷", "desc": "從依賴勞動所得償還負債，過渡到依賴資本所得完全覆蓋負債。"},
+                    {"term": "上檔敞開與下檔鎖定", "desc": "以可承受的固定借款成本博取不設限的長期指數增長空間。"}
+                ],
+                "action_guide": "計算資產規模何時達到『年平均增長額大於全年度負債還款額』的臨界點，明確財務自由時間表。"
+            },
+            {
+                "id": "ep40", "ep": 40, "category": "leverage", "category_name": "槓桿與正二 (00631L)",
+                "title": "EP.40｜買正二，在台股十萬之前｜你的認知，撐得起你的財富嗎？",
+                "summary": "展望台股邁向更高點位的歷史趨勢。台灣核心半導體具備全球壟斷力，短期的萬八、兩萬點在長週期看只是地基。投資人的真正瓶頸是自己的認知器量能否裝得下未來的財富。",
+                "top_takeaways": [
+                    "每一次科技典範轉移，都會把舊有的歷史高點踩在腳下變成未來的地基。",
+                    "台股已蛻變為全球 AI、運算與高科技不可或缺的核心硬體製造中心。",
+                    "如果只用過去傳統代工思維看待台股，就無法理解台股長期走長多的結構性支撐。"
+                ],
+                "key_concepts": [
+                    {"term": "台股結構性蛻變", "desc": "從週期循環轉變為擁有全球定價權的高毛利先進技術聚落。"},
+                    {"term": "錨定效應偏差", "desc": "心理盲目錨定在過去的歷史點位，從而對合理的估值擴張產生恐高症。"}
+                ],
+                "action_guide": "擺脫點位恐懼，改以企業實質獲利與自由現金流增長率評估市場水位，堅定長期持股信心。"
+            },
+            {
+                "id": "ep41", "ep": 41, "category": "debt", "category_name": "房產與負債管理",
+                "title": "EP.41｜不要害怕房貸，付著付著你就習慣了｜投資跟談戀愛都是要「堅持到底」",
+                "summary": "剖析剛買房者的心理摩擦期。面對房貸帳單，人腦會產生適應機制，初期感受強烈但隨後會融入日常背景，而換來的是確定的資產累積與安定感。堅持渡過前三年便是坦途。",
+                "top_takeaways": [
+                    "剛開始背房貸的前三年是最痛苦的心理摩擦期，習慣後負擔感會迅速遞減。",
+                    "薪資成長、通膨稀釋實質本息，讓房貸的實質壓迫感逐年降低。",
+                    "任何有價值的成果都需要在想放棄的時刻選擇堅持到底。"
+                ],
+                "key_concepts": [
+                    {"term": "負擔適應機制", "desc": "人類對恆常性支出會迅速建立心理適應，初期焦慮隨後大幅淡化。"},
+                    {"term": "摩擦期突破定律", "desc": "熬過建立習慣的最難階段後，後續維持成本將大幅降低。"}
+                ],
+                "action_guide": "若房貸初期感到壓力，善用寬限期或拉長還款年限至 30~40 年，為自己爭取前期的緩衝空間。"
+            },
+            {
+                "id": "ep42", "ep": 42, "category": "debt", "category_name": "房產與負債管理",
+                "title": "EP.42｜扛起貸款成為有肩膀的人｜越沒錢的人，尊嚴越高",
+                "summary": "辛辣探討弱勢者的心理防衛機制。真正的尊嚴來自於解決問題的能力與家庭安全感，而非虛榮的面子。敢於簽下合約、承擔長期負債與責任，才是成熟有肩膀的成年人。",
+                "top_takeaways": [
+                    "玻璃心無法為孩子支付學費，虛榮的面子也不能在生病時充當醫療費。",
+                    "富人勇於談錢、借錢、運用資本；越貧窮的人越容易用清高的面具掩蓋無能為力。",
+                    "放下無意義的敏感自尊，踏實把現金流與資產打牢，才是最強大的體面。"
+                ],
+                "key_concepts": [
+                    {"term": "補償性自尊", "desc": "在現實物質能力不足時，以過度防衛、敏感好面子來維護自我價值感。"},
+                    {"term": "真實肩膀", "desc": "不畏懼現實壓力，以務實的財務契約與行動為家人構建保護屏障。"}
+                ],
+                "action_guide": "審視過去是否曾因好面子而做出不理性的消費決策，下定決心改以實質資產與安全為導向。"
+            },
+            {
+                "id": "ep43", "ep": 43, "category": "leverage", "category_name": "槓桿與正二 (00631L)",
+                "title": "EP.43｜用槓桿ETF 做資產配置｜越爛的牌，越要用心打",
+                "summary": "公開高階槓桿配置心法：利用正2的『資本效率』釋放現金。『50% 正二 + 50% 現金』等同於 100% 大盤曝險，卻保留 50% 絕對安全的現金彈藥庫，打造攻防兼備的架構。",
+                "top_takeaways": [
+                    "出生起點無法選擇，拿到爛牌怨天尤人沒有意義，關鍵是如何運用規則逆風翻盤。",
+                    "用 50 萬買 0050正2 等同於投入 100 萬買 0050，瞬間釋放出 50 萬自由現金。",
+                    "50:50 配置法：享有完整大盤報酬，同時享有 50% 現金定存利息與股災加碼權。"
+                ],
+                "key_concepts": [
+                    {"term": "資本效率 (Capital Efficiency)", "desc": "利用衍生性商品以較少資金達成目標曝險，從而釋放大量現金。"},
+                    {"term": "50/50 正二現金策略", "desc": "總曝險 100%，同時持有 50% 現金儲備，兼具參與度與防震力。"}
+                ],
+                "action_guide": "若不敢全額持有槓桿標的，將資金劃分為兩半：50% 00631L + 50% 定存/短債，定期執行再平衡。"
+            },
+            {
+                "id": "ep44", "ep": 44, "category": "leverage", "category_name": "槓桿與正二 (00631L)",
+                "title": "EP.44｜越沒錢，越該認識正二｜每個人都要有一把衡量「價值」的尺",
+                "summary": "資本弱勢者最需要理解槓桿 ETF 的數學本質。每個人都必須建立一套衡量價值的尺規：用預期回報率、機會成本與資金時間價值測量每一筆花銷，打破資本天花板。",
+                "top_takeaways": [
+                    "富人本金龐大賺 3% 就能生活，沒錢的人若只賺 3% 一生都將耗盡在工作循環中。",
+                    "理解正二不是要你豪賭，而是掌握現代金融工程中最平民化的加速工具。",
+                    "建立價值尺規：這筆錢花掉是帶來即時快感，還是能為你持續生錢的優質資產？"
+                ],
+                "key_concepts": [
+                    {"term": "價值衡量尺規", "desc": "以未來的時間折現與複利潛力評估金錢支出，而非眼前的標價數字。"},
+                    {"term": "平民化金融槓桿", "desc": "無需銀行審核、無繁瑣合約、小額即可交易的交易所交易基金槓桿工具。"}
+                ],
+                "action_guide": "在重大消費前，先用『這筆錢若投入正二 20 年後的終值』換算其機會成本，養成精準衡量價值的直覺。"
+            },
+            {
+                "id": "ep45", "ep": 45, "category": "leverage", "category_name": "槓桿與正二 (00631L)",
+                "title": "EP.45｜如何做出150%的「全球股票」曝險？",
+                "summary": "探討跨國全球多資產的槓桿配置。結合 VT、美股槓桿 ETF（SSO / QLD）等工具，在控制最大回撤的前提下，打造出穩健的 150% 全球股票曝險組合，兼顧分散與超額報酬。",
+                "top_takeaways": [
+                    "單一國家槓桿有地緣政治風險，將槓桿概念延伸至全球市場是更穩健的頂層架構。",
+                    "150% 是生命週期投資學中公認能平衡長期回報與下檔波動的黃金曝險區間。",
+                    "全球化槓桿讓你在享受大盤超額成長的同時，擁有抵禦任一單一市場隕落的護城河。"
+                ],
+                "key_concepts": [
+                    {"term": "150% 適度槓桿法則", "desc": "生命週期投資研究指出，早期維持 1.5~2.0 倍槓桿能實現終生財富期望值最大化。"},
+                    {"term": "跨國槓桿模組組合", "desc": "以全球市值為底層，利用多種低相關工具疊加槓桿，避免單一市場黑天鵝。"}
+                ],
+                "action_guide": "在海外券商試算一套『VT + SSO』配置比例，確認總曝險倍數是否穩定落在 120%~150% 舒適區。"
+            },
+            {
+                "id": "ep46", "ep": 46, "category": "leverage", "category_name": "槓桿與正二 (00631L)",
+                "title": "EP.46｜如何成為槓桿藝術家？｜破解投資「不可能的三角形」",
+                "summary": "破局『高報酬、低風險、高流動性』不可能三角。透過動態再平衡、拉長時間跨度與負債期限匹配，在人生不同階段優雅調配，讓波動成為為自己打工的工具。",
+                "top_takeaways": [
+                    "引入『漫長時間維度』後，高波動資產的長期風險會隨持有期拉長而顯著衰減。",
+                    "槓桿藝術家精確拿捏進場時機、現金儲備、再平衡頻率與心理耐受力。",
+                    "掌握資產的流動性防線，你就擁有了在市場狂風暴雨中從容應對的底氣。"
+                ],
+                "key_concepts": [
+                    {"term": "投資不可能三角", "desc": "收益性、安全性與流動性在短期內不可兼得的經典金融權衡。"},
+                    {"term": "時間維度降維打擊", "desc": "將投資視野拉長至 20 年以上，短期劇烈波動將被平滑為確定性向上趨勢。"}
+                ],
+                "action_guide": "檢視組合是否過度偏廢某個維度，設定每季或每半年執行一次再平衡，保持動態平衡。"
+            },
+            {
+                "id": "ep47", "ep": 47, "category": "leverage", "category_name": "槓桿與正二 (00631L)",
+                "title": "EP.47｜股票黃金我全都要：股+金配置（GDE）｜做風險對沖之前，先留現金",
+                "summary": "介紹 WisdomTree 股金雙拼 ETF（GDE，90% 美股 + 90% 黃金）。解析黃金抗法幣通膨與避險特質，以及股金互補的數學優勢。強調在嘗試複雜避險前，現金永遠是不可逾越的底線。",
+                "top_takeaways": [
+                    "GDE 透過高效合約結構，用 100 萬資金同時取得 90 萬美股與 90 萬黃金的 180% 總曝險。",
+                    "股票代表生產力增長，黃金對抗信用貨幣濫發，兩者具備極佳的長期低相關互補性。",
+                    "股金配置再好，不能直接拿去付明天的生活費，充足的現金儲備永遠是第一道防線。"
+                ],
+                "key_concepts": [
+                    {"term": "高效資本股金配置 (GDE)", "desc": "WisdomTree Efficient Gold Plus Equity ETF，結合 90% 現貨美股與 90% 黃金期貨。"},
+                    {"term": "非相關資產再平衡溢酬", "desc": "長期向上且走勢獨立的資產組合定期再平衡，能有效降低波動並提升複合回報。"}
+                ],
+                "action_guide": "研究美股 GDE 等資本效率產品，並確保銀行帳戶隨時備足至少 6 個月的生活現金儲備。"
+            },
+            {
+                "id": "ep48", "ep": 48, "category": "debt", "category_name": "房產與負債管理",
+                "title": "EP.48｜把房子算進去，你的股票可能買太少了｜風險應該事前決定，不是事後加碼",
+                "summary": "顛覆資產風險評估方式。揹著兩千萬房貸、坐擁兩千萬房子，股票卻只敢買五十萬，從總體資產負債表來看股票曝險嚴重不足！風險應事前用數學精算決定，而非等股市大漲才追高加碼。",
+                "top_takeaways": [
+                    "自住房本質上是超大型實質資產；把房子計入後，多數人的股票部位比例低得可憐。",
+                    "你以為你很保守，其實你只是把 95% 身家重押在單一台灣房產上，金融資產極度營養不良。",
+                    "事前決定風險預算：在風平浪靜時計算好總曝險上限，絕不要在大漲後被貪婪驅使追高。"
+                ],
+                "key_concepts": [
+                    {"term": "整體資產視角", "desc": "將房地產、保險與所有負債一併納入，計算真實的股票曝險百分比。"},
+                    {"term": "事前風險預算", "desc": "在投資初期設定好最大虧損底線與配置比例，杜絕情緒化追漲殺跌。"}
+                ],
+                "action_guide": "計算『股票佔總淨資產比例』。如果不到 30%，審視自己是否嚴重低配了金融資產。"
+            },
+            {
+                "id": "ep49", "ep": 49, "category": "mindset", "category_name": "思維與認知",
+                "title": "EP.49｜有錢人的孩子到底贏在哪？｜階級複製，複製的不只是錢",
+                "summary": "解構階級複製的深層秘密。富家子弟真正強大的是『容錯率』與『高級財商模型』。普通人若想翻轉，必須主動建立資本防線，用知識與理性人為創造出高容錯空間。",
+                "top_takeaways": [
+                    "窮人家孩子最大的劣勢是『容錯率極低』：失敗一次全家就陷入深淵。",
+                    "富家孩子有強大安全網墊底，能放膽嘗試高期望值的不對稱機會，最終在概率上勝出。",
+                    "平民翻身的唯一途徑：主動為自己打造能容忍 1~2 次重大失敗的財務防火牆。"
+                ],
+                "key_concepts": [
+                    {"term": "容錯率溢價", "desc": "能承擔多次試錯成本的人，擁有涉足高不確定性、高回報賽道的特權。"},
+                    {"term": "文化資本與心智傳承", "desc": "家庭環境潛移默化傳授的資源配置能力與對資本規則的深刻洞察。"}
+                ],
+                "action_guide": "停止怨懟出身，從今天起為自己打造財務防火牆，主動培養像資本家一樣思考問題的習慣。"
+            },
+            {
+                "id": "ep50", "ep": 50, "category": "sequence", "category_name": "生命週期與報酬順序",
+                "title": "EP.50｜前期大漲你賺不到，後期大跌你躲不掉｜累積期的報酬順序風險",
+                "summary": "探討兩大核心投資觀念：借貸投資底層邏輯與報酬順序風險。大仁解析為什麼工作收入無法追上資本增長，並剖析分批投入的迷思，提倡『生命週期投資法』作為最佳應對策略。",
+                "top_takeaways": [
+                    "一個人的總財富，等於『人力資本』加上『金融資本』。",
+                    "借貸投資的本質，是預先將未來的人力資本，提早轉換成現在的金融資本。",
+                    "社會運作的底層邏輯是資本主義皮凱提不等式 (R > G)，一味依賴薪資永遠追趕不上資本成長。",
+                    "分批投入無法消滅風險，它只是讓『曝險從低拉到高』的過程變長。",
+                    "在退休提領期，最怕『前期大跌、後期大漲』；在累積期，最怕『前期大漲、後期大跌』。",
+                    "傳統定期定額造成『頭輕腳重』，若在累積後期遇到大跌，將遭受毀滅性重傷。",
+                    "生命週期投資法透過『早期開槓桿』，預先拉高本金與曝險，有效平抑累積期的報酬順序風險。"
+                ],
+                "key_concepts": [
+                    {"term": "人力資本 (Human Capital)", "desc": "一個人一生工作收入折現後的資產價值總和。"},
+                    {"term": "皮凱提不等式 (R > G)", "desc": "資本報酬率 (R) 長期大於薪資增長率 (G)，單靠勞動所得無法追上資產增值。"},
+                    {"term": "報酬順序風險", "desc": "報酬率出現的先後順序對最終財富累積或提領成敗造成的決定性影響。"},
+                    {"term": "生命週期投資法", "desc": "主張在年輕累積期早期利用槓桿拉高曝險，讓一生的風險敞口平均化。"}
+                ],
+                "research_data": [
+                    "美股蒙地卡羅模擬 (1928-2025年，模擬100萬次)：每月固定投入 3 萬 (30年)，最終資產中位數約 6600 萬；預先借貸 712 萬單筆投入 (月還 3 萬，30年)，最終資產中位數達 1.31 億（近乎翻倍）。",
+                    "美股歷史真實數據實測 (1996-2026年)：每月定期定額 3 萬，最終總報酬約 7381 萬；預先借貸單筆投入 712 萬，最終資產成長至約 1.4 億。",
+                    "報酬順序對調殘酷實測：1996-2026 這 30 年是先跌後漲的好順序，定期定額可獲 7449 萬。但若將前後 15 年順序對調（變成先漲後跌），同樣定期定額最終獲利銳減至 4915 萬，蒸發近 2500 萬！"
+                ],
+                "case_studies": [
+                    {"scenario": "信貸投資與淨資產不變", "detail": "剛出社會人力資本 1000 萬。借信貸 300 萬買股，多 300 萬金融資產與 300 萬負債，淨資產仍是 1000 萬，但資金提早參與市場複利。"},
+                    {"scenario": "買房與買股的雙標心態", "detail": "多數人買房願意付頭期款揹 30 年八成房貸（開 5 倍槓桿）；但買股卻堅持存全款慢慢買，忽視了金融資產增長速度不會等人的事實。"}
+                ],
+                "action_guide": "認真學習生命週期投資法，評估在自身還款現金流無虞的前提下，透過低利信貸或正2槓桿，及早將市場曝險拉到合理水位。"
+            }
+        ];
+
+        let currentEpisodeId = "ep50";
+        let activeCategory = "all";
+        let searchQuery = "";
+
+        const episodeListEl = document.getElementById("episodeList");
+        const contentContainerEl = document.getElementById("contentContainer");
+        const searchInput = document.getElementById("searchInput");
+        const clearSearchBtn = document.getElementById("clearSearch");
+        const categoryBar = document.getElementById("categoryBar");
+        const themeToggle = document.getElementById("themeToggle");
+        const themeIcon = document.getElementById("themeIcon");
+        const themeText = document.getElementById("themeText");
+        const menuToggle = document.getElementById("menuToggle");
+        const sidebar = document.getElementById("sidebar");
+        const sidebarOverlay = document.getElementById("sidebarOverlay");
+        const contentView = document.getElementById("contentView");
+
+        function init() {
+            if (window.location.hash) {
+                const hashId = window.location.hash.replace("#", "");
+                if (EPISODES.some(e => e.id === hashId)) currentEpisodeId = hashId;
+            }
+            renderSidebar();
+            renderEpisodeDetail(currentEpisodeId);
+            setupEventListeners();
+            initTheme();
+        }
+
+        function initTheme() {
+            const savedTheme = localStorage.getItem("site-theme") || "dark";
+            applyTheme(savedTheme);
+        }
+
+        function applyTheme(theme) {
+            document.documentElement.setAttribute("data-theme", theme);
+            localStorage.setItem("site-theme", theme);
+            if (theme === "dark") {
+                themeIcon.textContent = "☀️";
+                themeText.textContent = "切換亮色";
+            } else {
+                themeIcon.textContent = "🌙";
+                themeText.textContent = "切換深色";
+            }
+        }
+
+        function renderSidebar() {
+            const filtered = EPISODES.filter(ep => {
+                const matchCat = activeCategory === "all" || ep.category === activeCategory;
+                const query = searchQuery.toLowerCase().trim();
+                const matchQuery = !query || 
+                    ep.title.toLowerCase().includes(query) ||
+                    ep.summary.toLowerCase().includes(query) ||
+                    ep.key_concepts.some(k => k.term.toLowerCase().includes(query) || k.desc.toLowerCase().includes(query));
+                return matchCat && matchQuery;
+            });
+
+            if (filtered.length === 0) {
+                episodeListEl.innerHTML = `<li style="padding:2rem 1.25rem;text-align:center;color:var(--text-muted);font-size:0.9rem;">找不到符合「<strong>${searchQuery}</strong>」的集數</li>`;
+                return;
+            }
+
+            episodeListEl.innerHTML = filtered.map(ep => `
+                <li class="episode-item ${ep.id === currentEpisodeId ? 'active' : ''}" data-id="${ep.id}">
+                    <div class="ep-meta-row">
+                        <span class="ep-badge">EP.${ep.ep}</span>
+                        <span class="ep-cat-tag">${ep.category_name}</span>
+                    </div>
+                    <div class="ep-list-title">${ep.title.replace(/^EP\.\d+｜?/, '').trim()}</div>
+                    <div class="ep-list-desc">${ep.summary}</div>
+                </li>
+            `).join("");
+
+            document.querySelectorAll(".episode-item").forEach(item => {
+                item.addEventListener("click", () => {
+                    const epId = item.getAttribute("data-id");
+                    selectEpisode(epId);
+                    sidebar.classList.remove("open");
+                    sidebarOverlay.classList.remove("active");
+                });
+            });
+        }
+
+        function selectEpisode(epId) {
+            currentEpisodeId = epId;
+            window.location.hash = epId;
+            renderSidebar();
+            renderEpisodeDetail(epId);
+            contentView.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        function renderEpisodeDetail(epId) {
+            const ep = EPISODES.find(e => e.id === epId) || EPISODES[0];
+            const currentIndex = EPISODES.findIndex(e => e.id === ep.id);
+            const prevEp = currentIndex > 0 ? EPISODES[currentIndex - 1] : null;
+            const nextEp = currentIndex < EPISODES.length - 1 ? EPISODES[currentIndex + 1] : null;
+
+            let researchHtml = "";
+            if (ep.research_data && ep.research_data.length > 0) {
+                researchHtml = `
+                    <section class="article-section">
+                        <h3 class="section-header-title"><span class="icon">📊</span> 研究與歷史數據驗證</h3>
+                        <ul class="data-list">
+                            ${ep.research_data.map(item => `<li>${item}</li>`).join("")}
+                        </ul>
+                    </section>
+                `;
+            }
+
+            let caseHtml = "";
+            if (ep.case_studies && ep.case_studies.length > 0) {
+                caseHtml = `
+                    <section class="article-section">
+                        <h3 class="section-header-title"><span class="icon">💼</span> 經典案例與情境對比</h3>
+                        <div class="data-table-container">
+                            <table class="styled-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width:25%;">情境模式</th>
+                                        <th>詳細解析與財務含義</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${ep.case_studies.map(c => `
+                                        <tr>
+                                            <td><strong>${c.scenario}</strong></td>
+                                            <td>${c.detail}</td>
+                                        </tr>
+                                    `).join("")}
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                `;
+            }
+
+            contentContainerEl.innerHTML = `
+                <article>
+                    <div class="article-header">
+                        <div class="ep-headline-badge">
+                            <span class="cat-pill-hero">${ep.category_name}</span>
+                            <span style="font-family:'JetBrains Mono',monospace;font-size:0.85rem;color:var(--text-muted);">
+                                EPISODE #${ep.ep}
+                            </span>
+                        </div>
+                        <h1 class="article-title">${ep.title}</h1>
+                        <div class="article-quick-nav">
+                            <button class="btn" id="copyShareBtn">🔗 複製分享連結</button>
+                            <div style="font-size:0.82rem;color:var(--text-muted);">槓桿思維・長期投資・資產配置</div>
+                        </div>
+                    </div>
+
+                    <section class="article-section">
+                        <h3 class="section-header-title"><span class="icon">💡</span> 本集核心大綱與破題</h3>
+                        <p class="summary-text">${ep.summary}</p>
+                    </section>
+
+                    <section class="article-section">
+                        <h3 class="section-header-title"><span class="icon">🔑</span> 本集精選 Top 觀念提煉</h3>
+                        <ol class="top-list">
+                            ${ep.top_takeaways.map(item => `<li>${item}</li>`).join("")}
+                        </ol>
+                    </section>
+
+                    <section class="article-section">
+                        <h3 class="section-header-title"><span class="icon">🧠</span> 重要金融名詞與認知概念</h3>
+                        <div class="concepts-grid">
+                            ${ep.key_concepts.map(k => `
+                                <div class="concept-card">
+                                    <h4>${k.term}</h4>
+                                    <p>${k.desc}</p>
+                                </div>
+                            `).join("")}
+                        </div>
+                    </section>
+
+                    ${researchHtml}
+                    ${caseHtml}
+
+                    <section class="article-section" style="padding:0;background:none;border:none;box-shadow:none;">
+                        <div class="action-box">
+                            <div class="action-box-icon">🎯</div>
+                            <div class="action-box-content">
+                                <h4>實戰投資與人生行動指引</h4>
+                                <p>${ep.action_guide}</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="bottom-pager">
+                        ${prevEp ? `<button class="btn" onclick="selectEpisode('${prevEp.id}')">⬅ 上一集：EP.${prevEp.ep}</button>` : `<div></div>`}
+                        ${nextEp ? `<button class="btn btn-primary" onclick="selectEpisode('${nextEp.id}')">下一集：EP.${nextEp.ep} ➡</button>` : `<div></div>`}
+                    </div>
+                </article>
+            `;
+
+            const copyShareBtn = document.getElementById("copyShareBtn");
+            if (copyShareBtn) {
+                copyShareBtn.addEventListener("click", () => {
+                    const shareUrl = window.location.origin + window.location.pathname + "#" + ep.id;
+                    navigator.clipboard.writeText(shareUrl).then(() => {
+                        copyShareBtn.textContent = "✅ 已複製連結！";
+                        setTimeout(() => { copyShareBtn.textContent = "🔗 複製分享連結"; }, 2000);
+                    });
+                });
+            }
+        }
+
+        function setupEventListeners() {
+            searchInput.addEventListener("input", (e) => {
+                searchQuery = e.target.value;
+                clearSearchBtn.style.display = searchQuery ? "block" : "none";
+                renderSidebar();
+            });
+
+            clearSearchBtn.addEventListener("click", () => {
+                searchInput.value = "";
+                searchQuery = "";
+                clearSearchBtn.style.display = "none";
+                renderSidebar();
+            });
+
+            categoryBar.addEventListener("click", (e) => {
+                if (e.target.classList.contains("filter-pill")) {
+                    document.querySelectorAll(".filter-pill").forEach(p => p.classList.remove("active"));
+                    e.target.classList.add("active");
+                    activeCategory = e.target.getAttribute("data-cat");
+                    renderSidebar();
+                }
+            });
+
+            themeToggle.addEventListener("click", () => {
+                const cur = document.documentElement.getAttribute("data-theme");
+                applyTheme(cur === "dark" ? "light" : "dark");
+            });
+
+            menuToggle.addEventListener("click", () => {
+                sidebar.classList.toggle("open");
+                sidebarOverlay.classList.toggle("active");
+            });
+
+            sidebarOverlay.addEventListener("click", () => {
+                sidebar.classList.remove("open");
+                sidebarOverlay.classList.remove("active");
+            });
+
+            window.addEventListener("hashchange", () => {
+                const hashId = window.location.hash.replace("#", "");
+                if (hashId && hashId !== currentEpisodeId && EPISODES.some(e => e.id === hashId)) {
+                    selectEpisode(hashId);
+                }
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", init);
     </script>
 </body>
 </html>
